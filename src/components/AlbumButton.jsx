@@ -5,7 +5,11 @@ function AlbumButton(props) {
         props.increment(props.isCorrect)
     }
     return (
-        <button onClick={handleClick} disabled={props.isAnswered} className="album-button">
+        <button
+            onClick={handleClick}
+            disabled={props.isAnswered}
+            className={`album-button ${props.isAnswered ? 'disabled' : ''}`}
+        >
             <div className="image-container">
                 <img src={props.albumImage} alt={props.albumName} className="blurred-img" />
                 <div className="text-overlay">

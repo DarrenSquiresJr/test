@@ -20,6 +20,22 @@
     padding: 10px 0;
     cursor: pointer;
     width: 95%;
+    transition: transform 0.2s, outline 0.2s;
+}
+
+.album-button:hover {
+    outline: 2px solid blue;
+}
+
+.album-button:active {
+    transform: scale(1.05);
+}
+
+.album-button.disabled:hover,
+.album-button.disabled:active {
+    outline: none;
+    transform: none;
+    cursor: default;
 }
 
 .image-container {
